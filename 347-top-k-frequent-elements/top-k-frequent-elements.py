@@ -12,4 +12,4 @@ class Solution(object):
 
         sorted_freq = sorted(freq, key=freq.get, reverse=True)
 
-        return sorted_freq[:k]
+        return sorted_freq[0:k]
