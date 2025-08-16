@@ -8,11 +8,7 @@ class Solution:
             return []
 
         for i in digits:
-            temp=[]
-            for j in res:
-                for k in dict[i]:
-                    temp.append(j+k)
-            res=temp
+            res=[j+k for j in res for k in dict[i]]
         return res
 
 
