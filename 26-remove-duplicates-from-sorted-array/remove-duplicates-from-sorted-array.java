@@ -12,14 +12,6 @@ class Solution {
             }
         }
 
-        int k = i + 1;
-
-        // (Optional) Fill remaining with underscores for visualization
-        String[] arrWithUnderscore = new String[nums.length];
-        for (int idx = 0; idx < k; idx++) arrWithUnderscore[idx] = String.valueOf(nums[idx]);
-        for (int idx = k; idx < nums.length; idx++) arrWithUnderscore[idx] = "_";
-
-        System.out.println(Arrays.toString(arrWithUnderscore));
-        return k;
+        return i+1;
     }
 }
