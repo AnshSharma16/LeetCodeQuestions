@@ -2,12 +2,11 @@ import java.util.Arrays;
 
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        // Copy nums2 into nums1’s empty slots
-        for (int i = 0; i < n; i++) {
-            nums1[m + i] = nums2[i];
-        }
+        // Copy nums2 directly into nums1 after m elements
+        System.arraycopy(nums2, 0, nums1, m, n);
 
-        // Sort the whole array
+        // Sort nums1
         Arrays.sort(nums1);
     }
 }
+
