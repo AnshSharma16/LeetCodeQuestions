@@ -1,12 +1,9 @@
 class Solution:
-    def containsDuplicate(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
-        seen = set() 
-        for num in nums:
-            if num in seen: 
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        freq_list= dict(Counter(nums))
+        for key,freq  in freq_list.items():
+            if freq>1:
                 return True
-            seen.add(num) 
-        return False  
+        else:
+            return False
+        
