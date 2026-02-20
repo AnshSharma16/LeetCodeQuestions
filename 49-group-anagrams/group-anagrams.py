@@ -1,13 +1,12 @@
-class Solution(object):
-    def groupAnagrams(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: List[List[str]]
-        """
-        anagrams = {}
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        groups={}
+        
         for word in strs:
-            sorted_word = ''.join(sorted(word))
-            if sorted_word not in anagrams:
-                anagrams[sorted_word] = []
-            anagrams[sorted_word].append(word)
-        return list(anagrams.values())
+            key="".join(sorted(word))
+
+            if key not in groups:
+                groups[key]=[]
+            
+            groups[key].append(word)
+        return list(groups.values())
