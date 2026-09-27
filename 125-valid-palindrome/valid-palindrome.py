@@ -5,7 +5,15 @@ class Solution:
             if ch not in string.punctuation:
                 st+=ch
         res=st.replace(" ","").lower()
-        if res == res[::-1]:
-            return True
-        else:
-            return False
+        
+        left=0
+        right=len(res)-1
+
+        while left<right:
+            if res[left]!=res[right]:
+                return False
+
+            right-=1
+            left+=1
+        
+        return True
