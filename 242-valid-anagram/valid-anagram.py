@@ -1,8 +1,15 @@
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        s=list(s)
-        t=list(t)
-        if sorted(s)==sorted(t):
+        freq_s={}
+        for ch in s:
+            freq_s[ch]=freq_s.get(ch,0)+1
+
+        freq_t={}
+        for ch in t:
+            freq_t[ch]=freq_t.get(ch,0)+1
+
+        if freq_t==freq_s:
             return True
-        else:
-            return False
+
+        return False
